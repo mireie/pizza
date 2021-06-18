@@ -111,9 +111,13 @@ function Size(size, sizeBasePrice, multiplier) {
   this.multiplier = multiplier;
 }
 
-// function checkedTopping(input) {
-//   if (input).is(":checked")
-// }
+function checkedToppings() {
+  let selectedToppings = [];
+  $(".form-check-input:checkbox:checked").each(function() {
+    selectedToppings.push($(this).val());
+    return selectedToppings;
+  })
+}
 
 //Create toppings and sizes
 function initSizesToppings() {
@@ -140,31 +144,19 @@ function initSizesToppings() {
 let toppings = new Toppings();
 let sizes = new Sizes();
 let pizzas = new Pizzas();
-let pizza = new Pizza();
 
 //Interface Logic
 
-// function attachListeners() {
-//   $("ul#sizes").on("click","li", function() {
-//     pizza.addSize(this.id);
-//   })
-//   $("ul#ingredients").on("click", "li", function () {
-//     addTopping(this.id);
-//   });
-//   $("#add-pizza").on("click,","li",function() {
-//     new Pizza();
-//   })
-// }
-
-
 $(document).ready(function () {
-  // attachListeners();
   initSizesToppings();
   displayToppings(toppings);
   displaySizes(sizes);
   $(".submit").click(function() {
     const inputSize = $('input[name="size"]:checked').val();
-    console.log(inputSize);
+    let pizza = new Pizza(inputSize,checkedToppings());
+    let pizzaPrice = pizza.getPrice();
+    console.log(pizzaPrice);
+
   });
 
   //Testing Area
