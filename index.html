@@ -16,26 +16,81 @@
   <div class="container">
     <div class="row">
       <div class="col">
-        <h1>Pizza </h1>
+        <h1>Pizza Builder</h1>
       </div>
     </div>
-
     <div class="row">
-      <div class="col-sm-4" id="builder">
-        <h2>Pizza Builder</h2>
-        <h3>Size</h3>
-        <ul id="sizes"></ul>
-        <h3>Toppings</h3>
-        <ul id="ingredients"></ul>
-      </div>
-      <div class="col " id="your-pizza">
-        <h2>Your Pizza</h2>
-        <h3>Size</h3>
-        <span id="your-size">Please select a size to the left</span>
+      <div class="col-sm-8" id="builder">
+        <div class="row ">
+          <div class="col-sm-4">
+            <h3>Size</h3>
+            <div class="form-check">
+              <input class="form-check-input" type="radio" name="size" id="size-small" value="1">
+              <label class="form-check-label" for="small">
+                Small
+              </label>
+            </div>
+            <div class="form-check">
+              <input class="form-check-input" type="radio" name="size" id="size-medium" value="2">
+              <label class="form-check-label" for="size-medium">
+                Medium
+              </label>
+            </div>
+            <div class="form-check">
+              <input class="form-check-input" type="radio" name="size" id="size-large" value="3">
+              <label class="form-check-label" for="size-large">
+                Large
+              </label>
+            </div>
+            <div class="form-check">
+              <input class="form-check-input" type="radio" name="size" id="size-giant" value="4">
+              <label class="form-check-label" for="size-giant">
+                Giant
+              </label>
+            </div>
+          </div>
+          <div class="col" id="toppings">
+            <h2>Toppings</h2>
+            <div class="form-check">
+              <input class="form-check-input" type="checkbox" value="1" id="t1">
+              <label class="form-check-label" for="t1">
+                Pepperoni
+              </label>
+            </div>
+            <div class="form-check">
+              <input class="form-check-input" type="checkbox" value="2" id="t2">
+              <label class="form-check-label" for="t2">
+                Canadian Bacon
+              </label>
+            </div>
+            <div class="form-check">
+              <input class="form-check-input" type="checkbox" value="3" id="t3">
+              <label class="form-check-label" for="t3">
+                Pineapple
+              </label>
+            </div>
+            <div class="form-check">
+              <input class="form-check-input" type="checkbox" value="4" id="t4">
+              <label class="form-check-label" for="t4">
+                Olive
+              </label>
+            </div>
+            <div class="form-check">
+              <input class="form-check-input" type="checkbox" value="5" id="t5">
+              <label class="form-check-label" for="t5">
+                Mushroom
+              </label>
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="submit">Submit</div>
+        </div>
       </div>
       <div class="col-sm-4" id="pizza-cart">
         <h2>Pizza Cart</h2>
-        <ul id="your-ingredients"></ul>
+        <h3>Total Cost</h3>
+        <span id="pizza-cost"></span>
       </div>
     </div>
   </div>

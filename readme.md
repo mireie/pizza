@@ -58,7 +58,7 @@ Expected Output: 48
 ```
 
 ```
-Test: "It should allow a user to pick multiple toppings and one size and output a price"
+Test: "It should allow a user to click on size and toppings add to pizza"
 Code: 
 Expected Output: 
 

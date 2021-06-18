@@ -1,7 +1,27 @@
+/* colors
+Dark: #2E332D
+Orange: #E26C0D
+Red: #C43B13
+Green #53610B
+Whiteish: #FCFFFA
+*/
+
 body {
   background-color: #2E332D;
 
 }
-#builder, #your-pizza, #pizza-cart {
+#builder, #toppings, #pizza-cart {
   background-color: #FCFFFA;
+}
+.submit {
+  padding:1rem 5rem;;
+  margin:1rem auto;
+  border:solid #2E332D;
+  text-align:center;
+  background-color:#E26C0D;
+  color:#FCFFFA;
+  font-weight:bold;
+}
+.submit:hover {
+  cursor: pointer;
 }
