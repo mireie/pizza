@@ -22,11 +22,11 @@ function Pizza(size, toppings) {
   this.toppings = toppings;
 }
 
-Pizza.prototype.getPrice = function (size, toppings) {
-  sizePrice = size.sizeBasePrice;
+Pizza.prototype.getPrice = function (inputSize, inputToppings) {
+  sizePrice = inputSize.sizeBasePrice;
   let toppingsPrice = 0;
   Object.keys(toppings).forEach(function (key) {
-    toppingsPrice += toppings[key].basePrice * size.multiplier;
+    toppingsPrice += inputToppings[key].basePrice * size.multiplier;
   });
   const price = sizePrice + toppingsPrice;
   return price;
@@ -153,9 +153,10 @@ $(document).ready(function () {
   displaySizes(sizes);
   $(".submit").click(function () {
     const inputSize = $('input[name="size"]:checked').val();
-    let pizza = new Pizza(inputSize, checkedToppings());
+    const inputToppings = checkedToppings();
+    const pizza = new Pizza(inputSize, inputToppings);
     let pizzaPrice = pizza.getPrice();
     console.log(pizzaPrice);
-
+    $("#pizza-cost").html(pizzaPrice);
   });
 });

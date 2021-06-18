@@ -56,6 +56,14 @@ Code:  buildAPizza(large,[pepperoni, canadian bacon, pineapple]);
 Expected Output: 48
 ```
 
+```
+Describe: checkedToppings()
+
+Test: "It should return an array of all ids of checked toppings"
+Code:  checkedToppings();
+Expected Output: [1,2...]
+```
+
 ## Setup/Installation Requirements
 
 - Create and enter a directory on your local machine for the project
