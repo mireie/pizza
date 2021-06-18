@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -10,6 +11,7 @@
   <script src="js/scripts.js"></script>
   <title>Pizza</title>
 </head>
+
 <body>
   <div class="container">
     <div class="row">
@@ -19,16 +21,24 @@
     </div>
 
     <div class="row">
-      <div class="col-md-8">
+      <div class="col-sm-4" id="builder">
         <h2>Pizza Builder</h2>
-        <h3>Ingredients</h3>
-        <ul id="ingredients"></ul>
+        <h3>Size</h3>
         <ul id="sizes"></ul>
+        <h3>Toppings</h3>
+        <ul id="ingredients"></ul>
       </div>
-      <div class="col-md-4">
+      <div class="col " id="your-pizza">
+        <h2>Your Pizza</h2>
+        <h3>Size</h3>
+        <span id="your-size">Please select a size to the left</span>
+      </div>
+      <div class="col-sm-4" id="pizza-cart">
         <h2>Pizza Cart</h2>
+        <ul id="your-ingredients"></ul>
       </div>
     </div>
   </div>
 </body>
+
 </html>

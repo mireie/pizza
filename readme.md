@@ -51,6 +51,17 @@ Code:  buildAPizza(large,[pepperoni, canadian bacon, pineapple]);
 Expected Output: 48
 ```
 
+```
+Test: "It should allow a user to pick multiple toppings and one size and output a price"
+Code:  buildAPizza(large,[pepperoni, canadian bacon, pineapple]);
+Expected Output: 48
+```
+
+```
+Test: "It should allow a user to pick multiple toppings and one size and output a price"
+Code: 
+Expected Output: 
+
 
 ## Setup/Installation Requirements
 

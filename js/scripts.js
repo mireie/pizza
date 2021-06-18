@@ -1,3 +1,21 @@
+//Biz Logic for Pizzas
+function Pizzas() {
+  this.pizzaList = {};
+  this.currentId = 0;
+}
+
+Pizzas.prototype.assignId = function () {
+  this.currentId += 1;
+  return this.currentId;
+}
+
+Pizzas.prototype.findPizza = function (id) {
+  if (this.pizzaList[id] != undefined) {
+    return this.pizzaList[id];
+  }
+  return false;
+}
+
 //Biz Logic for Pizza
 function Pizza(size, toppings) {
   this.size = size;
@@ -118,7 +136,7 @@ function initSizesToppings() {
 
 let toppings = new Toppings();
 let sizes = new Sizes();
-
+let pizzas = new Pizzas();
 
 //Interface Logic
 $(document).ready(function () {
@@ -126,7 +144,9 @@ $(document).ready(function () {
   displayToppings(toppings);
   displaySizes(sizes);
 
-});
+  //Testing Area
 
-//Testing Area
-let pizza1 = new Pizza(sizes.sizeList[3],[toppings.toppingList[1],toppings.toppingList[2],toppings.toppingList[3]]);
+  let userSize = sizes.sizeList[1];
+  let toppingsArray = [toppings.toppingList[1], toppings.toppingList[2], toppings.toppingList[3]];
+  let pizza1 = new Pizza(userSize, toppingsArray);
+});
