@@ -54,7 +54,7 @@ Sizes.prototype.addSize = function (size) {
   this.sizeList[size.id] = size;
 }
 
-Sizes.prototype.assignId = function() {
+Sizes.prototype.assignId = function () {
   this.currentId += 1;
   return this.currentId;
 }
@@ -110,13 +110,17 @@ let toppings = new Toppings();
 let sizes = new Sizes();
 
 //Biz Logic for Build a Pizza
-function buildAPizza (size,topping) {
+function buildAPizza(size, toppings) {
   sizePrice = size.sizeBasePrice;
-  toppingPrice = topping.basePrice;
-  sizeMultiplyer = size.multiplier;
-  price = sizePrice + toppingPrice*sizeMultiplyer;
+  let toppingsPrice = 0;
+  Object.keys(toppings).forEach(function (key) {
+    toppingsPrice += toppings[key].basePrice * size.multiplier;
+  });
+  const price = sizePrice + toppingsPrice;
   return price;
 }
+
+
 
 //Interface Logic
 $(document).ready(function () {

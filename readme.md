@@ -45,11 +45,10 @@ Expected Output: 15
 Test: "It should allow a user to pick one topping and one size and output a price with a modifier for topping price based on size"
 Code:  buildAPizza(large,pepperoni);
 Expected Output: 30
-
 ```
 Test: "It should allow a user to pick multiple toppings and one size and output a price"
 Code:  buildAPizza(large,[pepperoni, canadian bacon, pineapple]);
-Expected Output: 15
+Expected Output: 48
 ```
 
 
