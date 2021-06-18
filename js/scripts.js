@@ -4,6 +4,16 @@ function Pizza(size, toppings) {
   this.toppings = toppings;
 }
 
+Pizza.prototype.getPrice = function (size, toppings) {
+  sizePrice = size.sizeBasePrice;
+  let toppingsPrice = 0;
+  Object.keys(toppings).forEach(function (key) {
+    toppingsPrice += toppings[key].basePrice * size.multiplier;
+  });
+  const price = sizePrice + toppingsPrice;
+  return price;
+}
+
 //Biz Logic for Toppings
 function Toppings() {
   this.toppingList = {};
@@ -109,18 +119,6 @@ function initSizesToppings() {
 let toppings = new Toppings();
 let sizes = new Sizes();
 
-//Biz Logic for Build a Pizza
-function buildAPizza(size, toppings) {
-  sizePrice = size.sizeBasePrice;
-  let toppingsPrice = 0;
-  Object.keys(toppings).forEach(function (key) {
-    toppingsPrice += toppings[key].basePrice * size.multiplier;
-  });
-  const price = sizePrice + toppingsPrice;
-  return price;
-}
-
-
 
 //Interface Logic
 $(document).ready(function () {
@@ -129,3 +127,6 @@ $(document).ready(function () {
   displaySizes(sizes);
 
 });
+
+//Testing Area
+let pizza1 = new Pizza(sizes.sizeList[3],[toppings.toppingList[1],toppings.toppingList[2],toppings.toppingList[3]]);
