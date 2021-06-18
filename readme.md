@@ -15,6 +15,18 @@
 
 _{This is a detailed description of your application. Give as much detail as needed to explain what the application does as well as any other information you want users or other developers to have.}_
 
+## Specs
+
+```
+Describe: mrBeepBoop()
+
+Test: "It should display a list of ingredients that are stored in an object"
+Code:
+
+Expected Output: 
+```
+
+
 ## Setup/Installation Requirements
 
 * _This is a great place_
