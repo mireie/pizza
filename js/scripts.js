@@ -111,7 +111,9 @@ function Size(size, sizeBasePrice, multiplier) {
   this.multiplier = multiplier;
 }
 
-//Biz Logic for addTopping
+// function checkedTopping(input) {
+//   if (input).is(":checked")
+// }
 
 //Create toppings and sizes
 function initSizesToppings() {
@@ -156,13 +158,14 @@ let pizza = new Pizza();
 
 
 $(document).ready(function () {
-  attachListeners();
+  // attachListeners();
   initSizesToppings();
   displayToppings(toppings);
   displaySizes(sizes);
-  $("#submit").click(function() {
-    const
-  })
+  $(".submit").click(function() {
+    const inputSize = $('input[name="size"]:checked').val();
+    console.log(inputSize);
+  });
 
   //Testing Area
 
