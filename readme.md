@@ -1,6 +1,4 @@
-# Pizza
-
-#### A template for readmes, how meta
+# Pizza Time
 
 #### By Michael Reiersgaard
 
@@ -13,7 +11,7 @@
 
 ## Description
 
-_{This is a detailed description of your application. Give as much detail as needed to explain what the application does as well as any other information you want users or other developers to have.}_
+A mock-pizzeria website that allows a user to choose a size and toppings and return a price.
 
 ## Specs
 
@@ -57,26 +55,19 @@ Code:  buildAPizza(large,[pepperoni, canadian bacon, pineapple]);
 Expected Output: 48
 ```
 
-```
-Test: "It should allow a user to click on size and toppings add to pizza"
-Code: 
-Expected Output: 
-
-
 ## Setup/Installation Requirements
 
-* _This is a great place_
-* _to list setup instructions_
-* _in a simple_
-* _easy-to-understand_
-* _format_
+- Create and enter a directory on your local machine for the project
+- Clone public repository from GitHub using `git clone https://github.com/mireie/pizza`
+- Open `index.html` to view the web page in your browser
 
-_{Leave nothing to chance! You want it to be easy for potential users, employers and collaborators to run your app. Do I need to run a server? How should I set up my databases? Is there other code this application depends on? We recommend deleting the project from your desktop, re-cloning the project from GitHub, and writing down all the steps necessary to get the project working again.}_
+## GitHub Links
+- [GitHub Repo](https://github.com/mireie/pizza)
+- [GitHub Pages](https://mireie.github.io/pizza/)
 
 ## Known Bugs
 
-* _Any known issues_
-* _should go here_
+* Currently only functional in the console.
 
 ## License
 

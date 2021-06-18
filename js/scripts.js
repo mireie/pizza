@@ -113,7 +113,7 @@ function Size(size, sizeBasePrice, multiplier) {
 
 function checkedToppings() {
   let selectedToppings = [];
-  $(".form-check-input:checkbox:checked").each(function() {
+  $(".form-check-input:checkbox:checked").each(function () {
     selectedToppings.push($(this).val());
     return selectedToppings;
   })
@@ -151,17 +151,11 @@ $(document).ready(function () {
   initSizesToppings();
   displayToppings(toppings);
   displaySizes(sizes);
-  $(".submit").click(function() {
+  $(".submit").click(function () {
     const inputSize = $('input[name="size"]:checked').val();
-    let pizza = new Pizza(inputSize,checkedToppings());
+    let pizza = new Pizza(inputSize, checkedToppings());
     let pizzaPrice = pizza.getPrice();
     console.log(pizzaPrice);
 
   });
-
-  //Testing Area
-
-  let userSize = sizes.sizeList[1];
-  let toppingsArray = [toppings.toppingList[1], toppings.toppingList[2], toppings.toppingList[3]];
-  let pizza1 = new Pizza(userSize, toppingsArray);
 });
