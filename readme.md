@@ -1,4 +1,4 @@
-# Readme.md
+# Pizza
 
 #### A template for readmes, how meta
 
@@ -28,9 +28,17 @@ Expected Output: <ul> of all ingredients
 ```
 Describe: displaySizes(toppings)
 
-Test: "It should allow a list of sizes that are stored in an object"
+Test: "It should display a list of sizes that are stored in an object"
 Code:  displaySizes();
 Expected Output: <ul> of all sizes
+```
+
+```
+Describe: buildAPizza()
+
+Test: "It should allow a user to pick one topping and one size and output a price"
+Code:  buildAPizza(small,pepperoni);
+Expected Output: 15
 ```
 
 

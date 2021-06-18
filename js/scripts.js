@@ -109,6 +109,15 @@ function initSizesToppings() {
 let toppings = new Toppings();
 let sizes = new Sizes();
 
+//Biz Logic for Build a Pizza
+function buildAPizza (size,topping) {
+  sizePrice = size.sizeBasePrice;
+  toppingPrice = topping.basePrice;
+  sizeMultiplyer = size.multiplier;
+  price = sizePrice + toppingPrice*sizeMultiplyer;
+  return price;
+}
+
 //Interface Logic
 $(document).ready(function () {
   initSizesToppings();
