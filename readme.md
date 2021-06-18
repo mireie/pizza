@@ -18,12 +18,19 @@ _{This is a detailed description of your application. Give as much detail as nee
 ## Specs
 
 ```
-Describe: mrBeepBoop()
+Describe: displayToppings(toppings)
 
 Test: "It should display a list of ingredients that are stored in an object"
-Code:
+Code:  displayToppings(toppings);
+Expected Output: <ul> of all ingredients
+```
 
-Expected Output: 
+```
+Describe: displaySizes(toppings)
+
+Test: "It should allow a list of sizes that are stored in an object"
+Code:  displaySizes();
+Expected Output: <ul> of all sizes
 ```
 
 
