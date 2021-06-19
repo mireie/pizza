@@ -22,11 +22,12 @@ function Pizza(size, toppings) {
   this.toppings = toppings;
 }
 
-Pizza.prototype.getPrice = function (inputSize, inputToppings) {
-  sizePrice = inputSize.sizeBasePrice;
+Pizza.prototype.getPrice = function () {
+  sizePrice = this.size.sizeBasePrice;
+  sizePriceMultiplier = this.size.multiplier;
   let toppingsPrice = 0;
-  Object.keys(toppings).forEach(function (key) {
-    toppingsPrice += inputToppings[key].basePrice * size.multiplier;
+  Object.keys(toppings.toppingList).forEach(function (key) {
+    toppingsPrice += testPizza.toppingsList.basePrice * sizePriceMultiplier;
   });
   const price = sizePrice + toppingsPrice;
   return price;
@@ -144,6 +145,7 @@ function initSizesToppings() {
 let toppings = new Toppings();
 let sizes = new Sizes();
 let pizzas = new Pizzas();
+let testPizza = new Pizza();
 
 //Interface Logic
 
@@ -152,11 +154,14 @@ $(document).ready(function () {
   displayToppings(toppings);
   displaySizes(sizes);
   $(".submit").click(function () {
-    const inputSize = $('input[name="size"]:checked').val();
+    const inputSize = sizes.sizeList[$('input[name="size"]:checked').val()];
     const inputToppings = checkedToppings();
-    const pizza = new Pizza(inputSize, inputToppings);
-    let pizzaPrice = pizza.getPrice();
+    const inputPizza = new Pizza(inputSize, inputToppings);
+    let pizzaPrice = inputPizza.getPrice();
     console.log(pizzaPrice);
-    $("#pizza-cost").html(pizzaPrice);
+    $("#pizza-cost").html("$"+pizzaPrice);
   });
+  testPizza = new Pizza(sizes.sizeList[1],[toppings.toppingList[1],toppings.toppingList[2]]);
+  console.log(testPizza);
+  console.log(testPizza.getPrice);
 });
