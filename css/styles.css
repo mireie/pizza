@@ -41,10 +41,8 @@ body {
   background-color: #FCFFFA;
   padding: 1rem;
   margin-bottom: 1rem;
-}
-
-.gap {
-  margin: 1rem;
+  border: solid #C43B13 .5rem;
+  border-top: none;
 }
 
 #selection {
