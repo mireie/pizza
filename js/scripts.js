@@ -1,4 +1,4 @@
-//Biz Logic for Pizzas
+//Biz Logic for Pizzas (I don't think this is neccesary unless there's a reason to store pizzas.)
 function Pizzas() {
   this.pizzaList = {};
   this.currentId = 0;
@@ -56,16 +56,6 @@ Toppings.prototype.findTopping = function (id) {
   return false;
 }
 
-function displayToppings(toppings) {
-  let ingredientList = $("ul#ingredients");
-  let htmlForIngredientInfo = "";
-  Object.keys(toppings.toppingList).forEach(function (key) {
-    const topping = toppings.findTopping(key);
-    htmlForIngredientInfo += "<li id=" + topping.id + ">" + topping.topping + "</li>"
-  });
-  ingredientList.html(htmlForIngredientInfo);
-}
-
 //Biz Logic for Topping
 function Topping(topping, basePrice) {
   this.topping = topping;
@@ -93,16 +83,6 @@ Sizes.prototype.findSize = function (id) {
     return this.sizeList[id];
   }
   return false;
-}
-
-function displaySizes(sizes) {
-  let sizeList = $("ul#sizes");
-  let htmlForSizeInfo = "";
-  Object.keys(sizes.sizeList).forEach(function (key) {
-    const size = sizes.findSize(key);
-    htmlForSizeInfo += "<li id=" + size.id + ">" + size.size + "</li>"
-  });
-  sizeList.html(htmlForSizeInfo);
 }
 
 //Biz Logic for Size
@@ -151,8 +131,6 @@ let testPizza = new Pizza();
 
 $(document).ready(function () {
   initSizesToppings();
-  displayToppings(toppings);
-  displaySizes(sizes);
   $(".submit").click(function () {
     const inputSize = sizes.sizeList[$('input[name="size"]:checked').val()];
     const inputToppings = checkedToppings();
