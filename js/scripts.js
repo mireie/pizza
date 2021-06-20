@@ -105,6 +105,6 @@ $(document).ready(function () {
     const inputToppings = checkedToppings();
     const inputPizza = new Pizza(inputSize, inputToppings);
     let pizzaPrice = inputPizza.getPrice(inputPizza);
-    $("#pizza-cost").html("$" + pizzaPrice + ".");
+    $("#pizza-cost").html("<div id=\"selection\">$" + pizzaPrice + "</div>");
   });
 });

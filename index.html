@@ -15,17 +15,17 @@
 <body>
   <div class="container">
     <div class="row">
-      <div class="col">
+      <div class="col m-0">
         <div class="header">
-          <h1>Pizza Builder</h1>
+          <h1>It's Pizza Time!</h1>
           <p>Select a size, choose your toppings, and hit submit to get a price for your delicious pizza.</p>
         </div>
       </div>
     </div>
-    <div class="row">
+    <div class="row m-0">
       <div class="col-sm-8" id="builder">
-        <div class="row ">
-          <div class="col-sm-4">
+        <div class="row">
+          <div class="col" id="size">
             <h3>Size</h3>
             <form id="form-size">
               <div class="form-check">
@@ -89,13 +89,14 @@
           </div>
         </div>
         <div class="row">
-          <div class="submit">Submit</div>
+          <div class="submit">ADD IT UP!</div>
         </div>
       </div>
       <div class="col-sm-4" id="pizza-cart">
-        <h2>Pizza Cart</h2>
-        <h3>Total Cost</h3>
-        <p>This combination will run you <span id="pizza-cost"></span></p>
+        <div class="inner-cart">
+          <h2>Pizza Total</h2>
+          <div id="pizza-cost">Please make a selection</div>
+        </div>
       </div>
     </div>
   </div>

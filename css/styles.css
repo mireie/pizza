@@ -7,30 +7,53 @@ Whiteish: #FCFFFA
 */
 
 body {
-    background-color: #2E332D;
+  background-color: #2E332D;
 }
 
-#builder,
-#toppings,
+#builder, #pizza-cart {
+  background-color: #FCFFFA;
+  padding-bottom: 1rem;
+  border: solid #E26C0D .5rem;
+}
+
 #pizza-cart {
-    background-color: #FCFFFA;
+  border: solid #53610B .5rem;
+  text-align: center;
 }
 
 .submit {
-    padding: 1rem 5rem;
-    ;
-    margin: 1rem auto;
-    border: solid #2E332D;
-    text-align: center;
-    background-color: #E26C0D;
-    color: #FCFFFA;
-    font-weight: bold;
+  padding: 1rem 5rem;
+  ;
+  margin: 1rem auto;
+  border: solid #2E332D;
+  text-align: center;
+  background-color: #E26C0D;
+  color: #FCFFFA;
+  font-weight: bold;
+  border-radius: 1rem;
 }
 
 .submit:hover {
-    cursor: pointer;
+  cursor: pointer;
+  background-color: #53610B;
 }
 
 .header {
-    background-color: white;
+  background-color: #FCFFFA;
+  padding: 1rem;
+  margin-bottom: 1rem;
+}
+
+.gap {
+  margin: 1rem;
+}
+
+#selection {
+  font-size: 5rem;
+  margin-top: 2.8rem;
+  background-color: #53610B;
+  color: #FCFFFA;
+  border-radius: 2rem;
+  padding:1rem;
+  margin-top:2.5rem;
 }
