@@ -39,7 +39,7 @@ body {
 
 .header {
   background-color: #FCFFFA;
-  padding: 1rem;
+  padding:0 1rem;
   margin-bottom: 1rem;
   border: solid #C43B13 .5rem;
   border-top: none;
