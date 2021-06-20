@@ -31,6 +31,6 @@ body {
     cursor: pointer;
 }
 
-h1 {
+.header {
     background-color: white;
 }

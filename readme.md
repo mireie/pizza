@@ -76,7 +76,7 @@ Expected Output: [1,2...]
 
 ## Known Bugs
 
-* Currently only functional in the console.
+* Tenths of a dollar do not show two decimal places.
 
 ## License
 
