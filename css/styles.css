@@ -7,24 +7,30 @@ Whiteish: #FCFFFA
 */
 
 body {
-  background-color: #2E332D;
+    background-color: #2E332D;
 }
 
-#builder, #toppings, #pizza-cart {
-  background-color: #FCFFFA;
+#builder,
+#toppings,
+#pizza-cart {
+    background-color: #FCFFFA;
 }
 
 .submit {
-  padding: 1rem 5rem;
-  ;
-  margin: 1rem auto;
-  border: solid #2E332D;
-  text-align: center;
-  background-color: #E26C0D;
-  color: #FCFFFA;
-  font-weight: bold;
+    padding: 1rem 5rem;
+    ;
+    margin: 1rem auto;
+    border: solid #2E332D;
+    text-align: center;
+    background-color: #E26C0D;
+    color: #FCFFFA;
+    font-weight: bold;
 }
 
 .submit:hover {
-  cursor: pointer;
+    cursor: pointer;
+}
+
+h1 {
+    background-color: white;
 }
