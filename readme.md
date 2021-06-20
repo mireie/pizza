@@ -61,8 +61,23 @@ Describe: checkedToppings()
 
 Test: "It should return an array of all ids of checked toppings"
 Code:  checkedToppings();
-Expected Output: [1,2...]
+User Input: Checked: Pepperoni, Mushroom 
+Expected Output: [1,5]
 ```
+```
+Describe: getPrice
+Test: "It should return the sum of price of the pizza size and the toppings multiplied by the size modifier"
+Code:  pizza.getPrice(inputPizza);
+inputPizza =  (large,[pepperoni, canadian bacon, pineapple])
+Expected Output: 48
+```
+```
+Test: "It should return the price with two decimals"
+Code:  pizza.getPrice(inputPizza);
+inputPizza =  (medium,[pepperoni])
+Expected Output: 22.50
+```
+
 
 ## Setup/Installation Requirements
 
