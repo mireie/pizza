@@ -46,11 +46,13 @@ body {
 }
 
 #selection {
-  font-size: 5rem;
+  font-size: min(max(1rem, 5vw), 48px);
   margin-top: 2.8rem;
   background-color: #53610B;
   color: #FCFFFA;
   border-radius: 2rem;
   padding: 1rem;
   margin-top: 2.5rem;
+  border:dashed #C43B13 .5rem;
+  font-weight:bold;
 }
