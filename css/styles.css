@@ -23,7 +23,6 @@ body {
 
 .submit {
   padding: 1rem 5rem;
-  ;
   margin: 1rem auto;
   border: solid #2E332D;
   text-align: center;
@@ -54,6 +53,6 @@ body {
   background-color: #53610B;
   color: #FCFFFA;
   border-radius: 2rem;
-  padding:1rem;
-  margin-top:2.5rem;
+  padding: 1rem;
+  margin-top: 2.5rem;
 }
