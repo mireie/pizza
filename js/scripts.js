@@ -1,21 +1,3 @@
-//Biz Logic for Pizzas (I don't think this is neccesary unless there's a reason to store pizzas.)
-function Pizzas() {
-  this.pizzaList = {};
-  this.currentId = 0;
-}
-
-Pizzas.prototype.assignId = function () {
-  this.currentId += 1;
-  return this.currentId;
-}
-
-Pizzas.prototype.findPizza = function (id) {
-  if (this.pizzaList[id] != undefined) {
-    return this.pizzaList[id];
-  }
-  return false;
-}
-
 //Biz Logic for Pizza
 function Pizza(size, toppings) {
   this.size = size;
@@ -49,13 +31,6 @@ Toppings.prototype.assignId = function () {
   return this.currentId;
 }
 
-Toppings.prototype.findTopping = function (id) {
-  if (this.toppingList[id] != undefined) {
-    return this.toppingList[id];
-  }
-  return false;
-}
-
 //Biz Logic for Topping
 function Topping(topping, basePrice) {
   this.topping = topping;
@@ -78,19 +53,14 @@ Sizes.prototype.assignId = function () {
   return this.currentId;
 }
 
-Sizes.prototype.findSize = function (id) {
-  if (this.sizeList[id] != undefined) {
-    return this.sizeList[id];
-  }
-  return false;
-}
-
 //Biz Logic for Size
 function Size(size, sizeBasePrice, multiplier) {
   this.size = size;
   this.sizeBasePrice = sizeBasePrice;
   this.multiplier = multiplier;
 }
+
+//Let's make some pizzas
 
 function checkedToppings() {
   let selectedToppings = [];
@@ -100,7 +70,8 @@ function checkedToppings() {
   return selectedToppings;
 }
 
-//Create toppings and sizes (After completing this I realize I could have done this without functions and just define static objects.)
+//Create toppings and sizes
+//(After completing this I realize I could have done this without functions and just define static objects for the toppings and pizzas.)
 function initSizesToppings() {
   const topping1 = new Topping("Pepperoni", 5);
   const topping2 = new Topping("Canadian Bacon", 5);
@@ -122,10 +93,8 @@ function initSizesToppings() {
   sizes.addSize(sizeGiant);
 }
 
-let pizzas = new Pizzas();
 let toppings = new Toppings();
 let sizes = new Sizes();
-let testPizza = new Pizza();
 
 //Interface Logic
 
@@ -136,7 +105,6 @@ $(document).ready(function () {
     const inputToppings = checkedToppings();
     const inputPizza = new Pizza(inputSize, inputToppings);
     let pizzaPrice = inputPizza.getPrice(inputPizza);
-    console.log(pizzaPrice);
-    $("#pizza-cost").html("$" + pizzaPrice);
+    $("#pizza-cost").html("$" + pizzaPrice + ".");
   });
 });
